@@ -5,7 +5,7 @@ from .wordtonum.py import num
 class Time:
 	def _init_(self, sentence):
 		self.sen = sentence.lower()
-		self.timedate = time.strftime("%M %H %d %m %y"))
+		self.timedate = time.strftime("%M %H %d %m %y")
 		self.uppervalue = [59, 24, 31, 2200]
 		self.lowervalue = [0,0, 1, 1970]
 		self.time_clause = []
@@ -62,6 +62,21 @@ class Time:
 		
 		return (self.time_clause, self.time_phrase)
 	
-	#def guessing_timestamp(self):
-		#for word in self.time_phrase:
-			
+	def guessing_timestamp(self):
+		# to do => opp, value, type
+		to_do = {
+			'opp' = '',
+			'value' = [0 for x in range(5)],
+			'type' = ''
+		}
+		# Add, Set, Sub
+		opp = [0, 0, 0]
+		# Stamp, Triger, Period
+		trigger = []
+		
+		helper = [name[0] for name in helper_list]
+		temp_list = [name[0] for name in word_list]
+		for word in self.time_phrase:
+			if word in helper:
+				lis = helper_list[helper.index(word)][4].split('/')
+				
