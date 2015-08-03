@@ -72,7 +72,7 @@ numWords = OneOrMore( (numPart + Optional(mag)).setParseAction(wordprod) ).setPa
 numWords.ignore(CaselessLiteral("-"))
 numWords.ignore(CaselessLiteral("and"))
 
-def test(s):
+def num(s):
 	try:
 		val = numWords.parseString(s)[0]
 	except ParseException, pe:

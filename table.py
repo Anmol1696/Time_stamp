@@ -12,7 +12,6 @@ word_list = [
 	["months", 4, 'N', 'N', 3, 5],
 	["year", 5, 1, 'N', 'N', 4, 2],
 	["years", 5, 'N', 'N', 'N', 4, 5],
-	
 	['january', 7, 1, 'N', 'set', 4, 2], 
 	['february', 7, 2, 'N', 'set', 4, 2],
 	['march', 7, 3, 'N', 'set', 4, 2],
@@ -25,7 +24,16 @@ word_list = [
 	['october', 7, 10, 'N', 'set', 4, 2],
 	['november', 7, 11, 'N', 'set', 4, 2],
 	['december', 7, 12, 'N', 'set', 4, 2],
-	
+	['jan', 7, 1, 'N', 'set', 4, 2], 
+	['feb', 7, 2, 'N', 'set', 4, 2],
+	['aug', 7, 8, 'N', 'set', 4, 2],
+	['sep', 7, 9, 'N', 'set', 4, 2],
+	['oct', 7, 10, 'N', 'set', 4, 2],
+	['nov', 7, 11, 'N', 'set', 4, 2],
+	['dec', 7, 12, 'N', 'set', 4, 2]
+]
+
+helper_list = [
 	["in", 8, 'N', 'S/P less', 'add/set', 'N', 4],
 	["within", 8, 'N', 'P less', 'add/set', 'N', 4],
 	["on", 8, 'N', 'S', 'add/sub/set', 'N', 4],
@@ -33,6 +41,9 @@ word_list = [
 	["after", 8, 'N', 'P more', 'add/set', 'N', 4],
 	["last", 8, 'N', 'P less', 'sub', 'N', 4],
 	["next", 8, 'N', 'P less', 'add', 'N', 4],
-	["past", 8, 'N', 'P less/P more', 'add/sub', 'N', 4]
+	["past", 8, 'N', 'P less/P more', 'add/sub', 'N', 4],
+	["from", 8, 'N', 'P less/P more', 'add/sub', 'N', 4],
+	["now", 9, 'N', 'S/P less/P more', 'set/add/sub', 4],
+	["to", 10, 'N', 'P', 'add', 4]
 ]
 
