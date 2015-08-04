@@ -69,14 +69,42 @@ class Time:
 			'value' = [0 for x in range(5)],
 			'type' = ''
 		}
+		
 		# Add, Set, Sub
-		opp = [0, 0, 0]
+		opp = {
+			'add' = 0,
+			'set' = 0,
+			'sub' = 0
+		}
 		# Stamp, Triger, Period
-		trigger = []
+		triger = {
+			'S' = 0,
+			'P less' = 0,
+			'P more' = 0
+		}
+		
+		new_time = [0 for x in range(5)]
 		
 		helper = [name[0] for name in helper_list]
-		temp_list = [name[0] for name in word_list]
+		time_word = [name[0] for name in self.time_clause]
+		temp_list = [name[0] for name in word_list] + time_word
+		
+		time_opp = [name[1] for name in self.time_clause]
+		time_value = [name[2] for name in self.time_clause]
+		ind = []
+		val = []
 		for word in self.time_phrase:
 			if word in helper:
 				lis = helper_list[helper.index(word)][4].split('/')
-				
+				rank = helper_list[helper.index(word)][1]
+				for x in ['add','set','sub']: 
+					opp[x] += 1
+				for x in ['S','P less','P more']:
+					triger[x] += 1
+			if word in temp_list:
+				try:
+					ind.append(word_list[temp_list.index(word)][5])
+				except:
+					val.append(time_value[time_word.index(word)])
+					opp[time_opp[time_word.index(word)]] += 1
+			
